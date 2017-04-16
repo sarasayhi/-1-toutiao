@@ -4,10 +4,20 @@ package com.marissaman.model;
  * Created by saras on 2017/3/14.
  */
 public class User {
-    private String name;
-    public User(String name){
+    public User(String name) {
         this.name = name;
     }
+
+    public User() {
+    }
+
+    private String name;
+
+    private String password;
+
+    private String salt;
+
+    private String head_url;
 
     public String getName() {
         return name;
@@ -15,5 +25,29 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getHead_url() {
+        return head_url;
+    }
+
+    public void setHead_url(String head_url) {
+        this.head_url = head_url;
     }
 }
