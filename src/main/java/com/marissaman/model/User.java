@@ -11,13 +11,23 @@ public class User {
     public User() {
     }
 
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private String name;
 
     private String password;
 
     private String salt;
 
-    private String head_url;
+    private String headUrl;
 
     public String getName() {
         return name;
@@ -43,11 +53,11 @@ public class User {
         this.salt = salt;
     }
 
-    public String getHead_url() {
-        return head_url;
-    }
 
-    public void setHead_url(String head_url) {
-        this.head_url = head_url;
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl;
+    }
+    public String getHeadUrl() {
+        return headUrl;
     }
 }

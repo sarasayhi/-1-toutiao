@@ -1,10 +1,7 @@
 package com.marissaman.dao;
 
 import com.marissaman.model.User;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 /**
  * Created by saras on 2017/3/18.

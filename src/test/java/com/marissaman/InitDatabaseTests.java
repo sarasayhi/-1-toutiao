@@ -13,6 +13,7 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
+import java.util.Random;
 
 /**
  * Created by saras on 2017/4/16.
@@ -29,20 +30,21 @@ public class InitDatabaseTests {
 
     @Test
     public void initData(){
+        Random r = new Random();
+        News news = new News();
         for(int i = 0; i < 11; ++i){
             User user = new User();
-            user.setHead_url(String.format("http://images.nowcoder.com/head/%dt.png",random.nextInt(1000)));
+            user.setHeadUrl(String.format("http://images.nowcoder.com/head/%dt.png",r.nextInt(1000)));
             user.setName(String.format("USER%d",i));
             user.setPassword("");
             user.setSalt("");
             userDAO.addUser(user);
 
-            News news = new News();
             news.setCommentCount(i);
             Date date = new Date();
             date.setTime(date.getTime() + 1000*3600*5*i);
             news.setCreatedDate(date);
-            news.setImage(String.format("http://images.nowcoder.com/head/%dm.png",random.nextInt(1000)));
+            news.setImage(String.format("http://images.nowcoder.com/head/%dm.png", r.nextInt(1000)));
             news.setLikeCount(i+1);
             news.setUserId(i+1);
             news.setTitle(String.format("TITLE{%d}",i));

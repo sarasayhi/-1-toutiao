@@ -1,7 +1,9 @@
 package com.marissaman.dao;
 
 import com.marissaman.model.News;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
